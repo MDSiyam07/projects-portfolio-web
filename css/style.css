@@ -147,13 +147,29 @@ section {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .portfolio-item {
-        flex: 1 1 45%;
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 0.5em 0;
+    }
+
+    .reactjs, .nuxtjs {
+        width: 45%;
     }
 }
 
 @media (max-width: 480px) {
-    .portfolio-item {
-        flex: 1 1 90%;
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 0.5em 0;
+    }
+
+    .reactjs, .nuxtjs {
+        width: 80%;
     }
 }
