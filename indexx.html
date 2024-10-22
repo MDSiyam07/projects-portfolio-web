@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyam-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="smooth">
+        <!-- Navbar -->
+        <div class="navbar">
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Portfolio Section -->
+        <section id="projects">
+            <p>Projects</p>
+            <!-- Portfolio Grid Items -->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-content="This is a ReactJS project.">
+                    <img class="reactjs" src="assets/img/logo/logo-react.png" alt="ReactJS" />
+                    <div class="plus-sign">+</div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-content="This is a NuxtJS project.">
+                    <img class="nuxtjs" src="assets/img/logo/logo-nuxt.png" alt="NuxtJS" />
+                    <div class="plus-sign">+</div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about">
+            <p>About</p>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <p>Contact</p>
+        </section>
+        <!-- Footer -->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Social Icons -->
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section -->
+        <div>
+            <div style="font-size: 12px;">Copyright © | Siyam MOHAMED DHOIFFIR | 2024</div>
+        </div>
+    </div>
+    <!-- Modals -->
+    <!-- Portfolio Modal 1 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text">Some text in the Modal..</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

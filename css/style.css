@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 body {
-    text-align:center;
-    background-color:#eee;
-    color:#555;
-    font-family:'Roboto';
-    font-weight:300;
-    font-size:32px;
-    padding-top:40vh;
-    height:100vh;
-    overflow:hidden;
+    text-align: center;
+    background-color: #eee;
+    color: #555;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 40vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .scrolls {
@@ -26,9 +26,11 @@ body {
     font-size: 2rem;
     color: #f4f4f4;
 }
+
 .scrolls .center {
     font-size: 0.825rem;
 }
+
 .smooth {
     position: relative;
     width: 100%;
@@ -40,6 +42,7 @@ body {
     scroll-snap-type: y mandatory;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -50,6 +53,7 @@ body {
     font-size: 1rem;
     mix-blend-mode: luminosity;
 }
+
 .navbar ul {
     margin: 0;
     padding: 0;
@@ -58,10 +62,12 @@ body {
     width: 100%;
     justify-content: center;
 }
+
 .navbar ul li {
     margin: 0 1em;
     padding: 1em;
 }
+
 .navbar ul li a {
     position: relative;
     text-decoration: none;
@@ -69,6 +75,7 @@ body {
     font-weight: 600;
     color: #000;
 }
+
 .navbar ul li a::after {
     position: absolute;
     bottom: -3px;
@@ -78,6 +85,7 @@ body {
     height: 3px;
     transition: all 0.2s linear;
 }
+
 .navbar ul li a:hover::after {
     width: 100%;
     background-color: #000;
@@ -95,81 +103,57 @@ section {
     scroll-snap-align: center;
 }
 
-.row {
+/* Portfolio Section */
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-item {
+    flex: 1 1 30%;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.row div {
-    margin: 10px;
-}
-
-/* Technos stylesheets */
-.reactjs, .nuxtjs {
-    width: 30%;
+.portfolio-item img {
+    max-width: 100%;
     height: auto;
 }
 
-/* Plus sign styles */
-.portfolio-item {
-    position: relative;
-    display: inline-block;
+.reactjs, .nuxtjs {
+    width: 30%;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
-.plus-sign {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.reactjs:hover, .nuxtjs:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    border-color: transparent;
+    border-radius: 10%;
 }
 
-.portfolio-item:hover .plus-sign {
-    display: flex;
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 45%;
+    }
 }
 
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+@media (max-width: 480px) {
+    .portfolio-item {
+        flex: 1 1 90%;
+    }
 }
