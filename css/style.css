@@ -348,13 +348,13 @@ footer.row {
     height: auto;
 }
 
-.reactjs, .nuxtjs {
+.reactjs, .nuxtjs, .wordpress {
     width: 30%;
     height: auto;
     transition: all 0.3s ease;
 }
 
-.reactjs:hover, .nuxtjs:hover {
+.reactjs:hover, .nuxtjs:hover, .wordpress:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     border-color: transparent;
@@ -502,4 +502,16 @@ footer.row {
   #projects .card {
     text-align: center;
   }
+
+  .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        margin: 50px;
+    }
 }
