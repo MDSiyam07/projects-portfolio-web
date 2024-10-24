@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 /* =====================
   General Styles
 ===================== */
@@ -43,7 +44,6 @@ a {
 }
 a:focus,
 a:hover {
-  background-color: #5B62FF;
   color: #fffefd;
 }
 hr {
@@ -53,6 +53,7 @@ hr {
 
 section {
     background-color: #f4f4f4;
+    min-height: 50vh;
 }
 
 /* =====================
@@ -309,12 +310,43 @@ footer.row {
 }
 
 /* =====================
- Images
+    Images and Icons
 ===================== */
 /* Profile Pic */
 .profile {
   max-width: 180px;
   padding: 0 15px 0 0;
+}
+
+/* Socials Icons */
+.social {
+    margin: 0 10px;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social .fab {
+    font-size: 3em;
+}
+
+/* Couleurs des logos */
+.social .fa-linkedin {
+    color: #0077b5;
+}
+
+.social .fa-github {
+    color: #333;
+}
+
+/* Effet de survol */
+.social:hover .fa-linkedin {
+    color: #0056b3;
+    transform: scale(1.5);
+}
+
+.social:hover .fa-github {
+    color: #000;
+    transform: scale(1.5);
 }
 
 /* =====================
@@ -427,10 +459,6 @@ footer.row {
 .dashed {
   border-top: 2px dashed #ffce3f;
 }
-/*** Contact Form ***/
-.checkbox {
-  display: none;
-}
 
 /* =====================
   Media Queries
@@ -513,5 +541,22 @@ footer.row {
 
     .portfolio-item {
         margin: 50px;
+    }
+
+    .reactjs, .nuxtjs, .wordpress {
+        width: 50%;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+    
+    .reactjs:hover, .nuxtjs:hover, .wordpress:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+        border-color: transparent;
+        border-radius: 10%;
+    }
+
+    #contact .col-xs-12.col-sm-6 {
+        margin-bottom: 50px;
     }
 }
