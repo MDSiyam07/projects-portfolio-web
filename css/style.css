@@ -456,8 +456,8 @@ footer.row {
 
 .portfolio-text {
     display: none;
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 16px;
     color: #333;
     border-top: 1px solid #333;
     text-align: center;
@@ -468,7 +468,7 @@ footer.row {
     display: block;
     margin-bottom: 10px;
     color: #9da7a6;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
@@ -480,6 +480,10 @@ footer.row {
 .portfolio-text a:hover {
     color: #5B62FF;
     text-decoration: none;
+}
+
+.portfolio-text a:first-child {
+    margin-top: 10px;
 }
 
 .portfolio-text a:last-child {
