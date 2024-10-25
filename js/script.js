@@ -98,4 +98,23 @@ $(document).ready(function () {
   $(window).on('resize', function () {
     $('.modal:visible').each(centerModal);
   });
+
+  // Gère l'affichage de .portfolio-text sous chaque élément de portfolio lors du clic sur l'image
+  $('.portfolio-item > a').on('click', function (e) {
+        e.preventDefault(); // Empêche le comportement par défaut du lien
+        const textContainer = $(this).siblings('.portfolio-text');
+
+        // Masque toutes les autres sections .portfolio-text
+        $('.portfolio-text').not(textContainer).hide();
+
+        // Bascule l'affichage de .portfolio-text sur l'élément cliqué
+        textContainer.toggle();
+    });
+
+    // Assure que les liens <a> dans .portfolio-text ouvrent la modal sans masquer le texte
+    $('.portfolio-text a').on('click', function (e) {
+        e.stopPropagation(); // Empêche le clic de masquer .portfolio-text
+        const targetModal = $(this).data('target'); // Récupère l'ID de la modal
+        $(targetModal).modal('show'); // Ouvre la modal cible
+    });
 });
