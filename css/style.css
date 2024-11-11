@@ -490,17 +490,23 @@ footer.row {
     margin-bottom: 0;
 }
 
-.reactjs, .nuxtjs, .wordpress {
+.reactjs, .nuxtjs, .wordpress, .glide {
     width: 30%;
     height: auto;
     transition: all 0.3s ease;
 }
 
-.reactjs:hover, .nuxtjs:hover, .wordpress:hover {
+.reactjs:hover, .nuxtjs:hover, .wordpress:hover, .glide:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     border-color: transparent;
     border-radius: 10%;
+}
+
+.qrcode {
+    width: 20%;
+    height: auto;
+    margin-left: 50px;
 }
 
 /*** Project Modals ***/
@@ -510,7 +516,7 @@ footer.row {
   width: 100%;
 }
 .label.tag {
-    background-color: #ffce3f;
+    background-color: #5B62FF;
     border-radius: 0;
     font-weight: normal;
 }
