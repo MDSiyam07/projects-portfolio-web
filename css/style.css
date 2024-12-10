@@ -490,13 +490,25 @@ footer.row {
     margin-bottom: 0;
 }
 
-.reactjs, .nuxtjs, .wordpress, .glide {
+.nuxtjs, .glide, .nextjs {
     width: 30%;
     height: auto;
     transition: all 0.3s ease;
 }
 
-.reactjs:hover, .nuxtjs:hover, .wordpress:hover, .glide:hover {
+.reactjs {
+    width: 20%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.wordpress {
+    width: 25%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.reactjs:hover, .nuxtjs:hover, .wordpress:hover, .glide:hover, .nextjs:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     border-color: transparent;

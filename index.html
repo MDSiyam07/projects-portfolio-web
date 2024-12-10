@@ -140,6 +140,15 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item" data-content="This is a NextJS project.">
+                        <a>
+                            <img class="nextjs" src="assets/img/logo/logo-nextjs.png" alt="NextJS" />
+                        </a>
+                        <div class="portfolio-text">
+                            <a data-toggle="modal" data-target="#nextModal">Airmayi Platform</a>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
                     <div class="portfolio-item" data-content="This is a NuxtJS project.">
                         <a>
                             <img class="nuxtjs" src="assets/img/logo/logo-nuxt.png" alt="NuxtJS" />
@@ -148,7 +157,17 @@
                             <a data-toggle="modal" data-target="#nuxtModal">To-do list en NuxtJS</a>
                         </div>
                     </div>
-                    <!-- Portfolio Item 3 -->
+                    <!-- Portfolio Item 5 -->
+                    <div class="portfolio-item" data-content="This is a Glide project.">
+                        <a>
+                            <img class="glide" src="assets/img/logo/logo-glide.png" alt="Glide" />
+                        </a>
+                        <div class="portfolio-text">
+                            <a data-toggle="modal" data-target="#glideModal">RoomReserve</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 6 -->
                     <div class="portfolio-item" data-content="This is a WordPress project.">
                         <a>
                             <img class="wordpress" src="assets/img/logo/logo-wordpress.png" alt="WP" />
@@ -158,17 +177,7 @@
                             <!--<a data-toggle="modal" data-target="#nuxtModal">Eden James et ses photos</a>-->
                         </div>
                     </div>
-                    <div class="portfolio-item" data-content="Spacer"></div>
-                    <!-- Portfolio Item 4 -->
-                    <div class="portfolio-item" data-content="This is a Glide project.">
-                        <a>
-                            <img class="glide" src="assets/img/logo/logo-glide.png" alt="Glide" />
-                        </a>
-                        <div class="portfolio-text">
-                            <a data-toggle="modal" data-target="#glideModal">RoomReserve</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item" data-content="Spacer"></div>
+                    <!-- <div class="portfolio-item" data-content="Spacer"></div> -->
                 </div><!-- /#projects -->
             </div><!-- /.row -->
         </section>
@@ -347,6 +356,42 @@
                     <a class="btn td-btn outline green mb-30" href="https://roomreserve-app.glide.page" target="_blank" title="Link to Glide Project"><span class="glyphicon glyphicon-link"></span> Voir le projet</a>
                     <img class="qrcode" src="./assets/img/qrcode/qr-code.png" alt="qrcode">
                     <p><em>Scanner le QR Code pour tester l'application sur mobile</em></p>
+                </div>
+                </div><!-- /.row -->
+                <div class="modal-footer center">
+                <button type="button" class="btn td-btn outline small" data-dismiss="modal">Fermer la fenêtre</button>
+                </div><!-- /.modal-footer -->
+            </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- NextJS Project Modal -->
+        <div class="modal fade" id="nextModal" tabindex="-1" role="dialog" aria-labelledby="rbTitle">
+        <div class="modal-dialog wide" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title text-center" id="rbTitle">Détails du projet</h3>
+            </div><!-- /.modal-header -->
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Airmayi Platform</h2>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-0">
+                    <p>Plateforme Web sur la thématique recrutement avec un interface utilisateur Web basée sur le framework NextJS et la bibliothèque de composants Ant Design.</p>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-0 md-center">
+                    <p><strong>Technologies Utilisées:</strong></p>
+                    <p class="mb-30">
+                    <span class="label tag">NextJS</span>
+                    <span class="label tag">Redux</span>
+                    <span class="label tag">CSS</span>
+                    <span class="label tag">Ant Design</span>
+                    </p>
                 </div>
                 </div><!-- /.row -->
                 <div class="modal-footer center">
