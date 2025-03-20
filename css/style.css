@@ -508,7 +508,13 @@ footer.row {
     transition: all 0.3s ease;
 }
 
-.reactjs:hover, .nuxtjs:hover, .wordpress:hover, .glide:hover, .nextjs:hover {
+.notion {
+    width: 30%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.reactjs:hover, .nuxtjs:hover, .wordpress:hover, .glide:hover, .nextjs:hover, .notion:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     border-color: transparent;
@@ -671,13 +677,13 @@ footer.row {
         margin: 50px;
     }
 
-    .reactjs, .nuxtjs, .wordpress {
+    .reactjs, .nuxtjs, .wordpress, .notion {
         width: 50%;
         height: auto;
         transition: all 0.3s ease;
     }
     
-    .reactjs:hover, .nuxtjs:hover, .wordpress:hover {
+    .reactjs:hover, .nuxtjs:hover, .wordpress:hover, .notion:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         transform: scale(1.05);
         border-color: transparent;
