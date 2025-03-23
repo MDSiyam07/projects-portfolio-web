@@ -18,7 +18,48 @@ $(document).ready(function () {
 			$navbar.removeClass('menu-fixed').css('background-color', 'transparent');
 		}
 	}
-	document.onscroll = scroll;
+
+	// Add this after the existing scroll function
+	function updateActiveNavLink() {
+		var scrollPosition = $(window).scrollTop();
+		
+		// Get all sections
+		var sections = $('section, header').toArray();
+		
+		// Find the current section
+		var currentSection = sections.find(section => {
+			var element = $(section);
+			var offsetTop = element.offset().top - 100; // Adjust offset to account for navbar height
+			var offsetBottom = offsetTop + element.height();
+			
+			return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
+		});
+		
+		// Remove active class from all nav items
+		$('.navbar-nav li').removeClass('active');
+		
+		if (currentSection) {
+			// Get the corresponding nav link and set it as active
+			var sectionId = $(currentSection).attr('id');
+			if (sectionId) {
+				$(`.navbar-nav li a[href="#${sectionId}"]`).parent().addClass('active');
+			} else if ($(currentSection).is('header')) {
+				// Special case for the header/top section
+				$('.navbar-nav li a[href="#top"]').parent().addClass('active');
+			}
+		}
+	}
+
+	// Update the existing document.onscroll
+	document.onscroll = function() {
+		scroll();
+		updateActiveNavLink();
+	};
+
+	// Add this to handle initial state when page loads
+	$(document).ready(function() {
+		updateActiveNavLink();
+	});
 
 	// Mobile Menu functions
 	function openMenu() {
@@ -82,16 +123,16 @@ $(document).ready(function () {
 
 	// Center modals vertically
 	function centerModal() {
-    $(this).css('display', 'block');
-    var $dialog = $(this).find('.modal-dialog');
-    var $offset = ($(window).height() - $dialog.height()) / 2;
-    var $bottomMargin = parseInt($dialog.css('margin-bottom'), 10);
+        $(this).css('display', 'block');
+        var $dialog = $(this).find('.modal-dialog');
+        var $offset = ($(window).height() - $dialog.height()) / 2;
+        var $bottomMargin = parseInt($dialog.css('margin-bottom'), 10);
 
-    // If modal is taller than screen height, top margin = bottom margin
-    if ($offset < $bottomMargin) {
-    	$offset = $bottomMargin;
-    }
-    $dialog.css('margin-top', $offset);
+        // If modal is taller than screen height, top margin = bottom margin
+        if ($offset < $bottomMargin) {
+            $offset = $bottomMargin;
+        }
+        $dialog.css('margin-top', $offset);
   }
 
   $(document).on('show.bs.modal', '.modal', centerModal);
@@ -101,20 +142,20 @@ $(document).ready(function () {
 
   // Gère l'affichage de .portfolio-text sous chaque élément de portfolio lors du clic sur l'image
   $('.portfolio-item > a').on('click', function (e) {
-        e.preventDefault(); // Empêche le comportement par défaut du lien
+        e.preventDefault();
         const textContainer = $(this).siblings('.portfolio-text');
 
-        // Masque toutes les autres sections .portfolio-text
-        $('.portfolio-text').not(textContainer).hide();
+        $('.portfolio-text').not(textContainer).slideUp(200);
 
-        // Bascule l'affichage de .portfolio-text sur l'élément cliqué
-        textContainer.toggle();
+        if (textContainer.is(':hidden')) {
+            textContainer.slideDown(200);
+        } else {
+            textContainer.slideUp(200);
+        }
     });
-
-    // Assure que les liens <a> dans .portfolio-text ouvrent la modal sans masquer le texte
     $('.portfolio-text a').on('click', function (e) {
-        e.stopPropagation(); // Empêche le clic de masquer .portfolio-text
-        const targetModal = $(this).data('target'); // Récupère l'ID de la modal
-        $(targetModal).modal('show'); // Ouvre la modal cible
+        e.stopPropagation();
+        const targetModal = $(this).data('target');
+        $(targetModal).modal('show');
     });
 });
