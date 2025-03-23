@@ -162,8 +162,9 @@ section {
   Jumbotron Styles
 ===================== */
 .jumbotron {
+    background-image: url('../assets/img/texture/stole-img.jpg');
     /* gris foncé à gris clair - Gemini*/
-    background: linear-gradient(to right, #333333 0%, #444444 25%, #666666 50%, #888888 75%, #f9f9f9 100%);
+    /* background: linear-gradient(to right, #333333 0%, #444444 25%, #666666 50%, #888888 75%, #f9f9f9 100%); */
     
     /* Bleu nuit à bleu roi - ChatGPT*/
     /* background: linear-gradient(to right, #1C3E43 0%, #007BFF 100%); */
