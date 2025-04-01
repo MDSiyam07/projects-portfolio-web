@@ -95,20 +95,26 @@ section {
   padding-top: 0;
 }
 .navbar-brand {
-  font-size: 1.5rem;
   height: 60px;
   line-height: 60px;
   margin-top: 10px;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
-  text-transform: uppercase;
   transition: opacity 0.5s ease-in-out;
+  padding: 0 15px;
 }
-.navbar-brand .logo {
-  margin-right: 15px;
-  margin-top: -12px;
-  max-height: 90px;
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
 }
+
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.05);
+}
+
 .navbar-brand span {
   color: #007BFF;
 }
